@@ -19,6 +19,7 @@ class GameTest {
 	@BeforeEach
 	public void init() {
 		game = new Game();
+		System.out.println("Initialisation...");
 	}
 
 	@Test
@@ -43,5 +44,14 @@ class GameTest {
 		lancer(10,1);
 		lancer(10,2);
 		assertEquals(game.score(),30);
+	}
+	
+	@Test
+	public void test_spare() {
+		lancer(1,7);
+		lancer(1,3);
+		lancer(1,4);
+		lancer(17,0);
+		assertEquals(game.score(),18);
 	}
 }
