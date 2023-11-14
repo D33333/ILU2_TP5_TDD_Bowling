@@ -16,6 +16,12 @@ class GameTest {
 		}
 	}
 	
+	private void lancer_en_chaine(int[] lancers) {
+		for (int lancer : lancers) {
+			game.roll(lancer);
+		}
+	}
+	
 	@BeforeEach
 	public void init() {
 		game = new Game();
@@ -62,5 +68,11 @@ class GameTest {
 		lancer(1,4);
 		lancer(16,0);
 		assertEquals(game.score(),24);
+	}
+	
+	@Test
+	public void test_général() {
+		int[] lancers = new int[] {1,2,10,0,10,4,2,0,10,6,2,0,10,6,4,8,2,2,7};
+		lancer_en_chaine(lancers);
 	}
 }
