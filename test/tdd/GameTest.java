@@ -77,4 +77,10 @@ class GameTest {
 		assertEquals(game.score(),122);
 	}
 	
+	@Test
+	public void test_extension() {
+		int[] lancers = new int[] {1,2,10,0,10,4,2,0,10,6,2,0,10,6,4,8,2,2,8,8};
+		lancer_en_chaine(lancers);
+		assertEquals(game.score(),131);
+	}
 }
