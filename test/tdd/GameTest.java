@@ -54,4 +54,13 @@ class GameTest {
 		lancer(17,0);
 		assertEquals(game.score(),18);
 	}
+	
+	@Test
+	public void test_strike() {
+		lancer(1,10);
+		lancer(1,3);
+		lancer(1,4);
+		lancer(16,0);
+		assertEquals(game.score(),24);
+	}
 }
