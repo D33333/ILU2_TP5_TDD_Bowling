@@ -74,5 +74,7 @@ class GameTest {
 	public void test_général() {
 		int[] lancers = new int[] {1,2,10,0,10,4,2,0,10,6,2,0,10,6,4,8,2,2,7};
 		lancer_en_chaine(lancers);
+		assertEquals(game.score(),122);
 	}
+	
 }
