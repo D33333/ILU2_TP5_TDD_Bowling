@@ -83,4 +83,10 @@ class GameTest {
 		lancer_en_chaine(lancers);
 		assertEquals(game.score(),131);
 	}
+	
+	@Test
+	public void test_genie() {
+		lancer(12,10);
+		assertEquals(game.score(),300);		
+	}
 }
